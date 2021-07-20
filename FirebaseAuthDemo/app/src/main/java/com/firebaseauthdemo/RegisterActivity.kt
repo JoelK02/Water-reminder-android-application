@@ -1,0 +1,176 @@
+package com.firebaseauthdemo
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.content.Intent
+import android.text.TextUtils
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.auth.AuthResult
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import kotlin.jvm.internal.MutablePropertyReference2
+
+
+class RegisterActivity : AppCompatActivity() {
+
+    lateinit var  auth: FirebaseAuth
+    private lateinit var database : FirebaseDatabase
+    private lateinit var  reference: DatabaseReference
+    private lateinit var  reference2: DatabaseReference
+
+
+    lateinit var btn_register: Button
+    lateinit var et_register_email: EditText
+    lateinit var et_register_password: EditText
+    lateinit var et_register_username: EditText
+    lateinit var tv_login: TextView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_register)
+
+        auth = FirebaseAuth.getInstance()
+        database = FirebaseDatabase.getInstance("https://fir-authdemo-5224c-default-rtdb.asia-southeast1.firebasedatabase.app/")
+        reference = database.getReference("Users")
+        reference2 = database.getReference("Cup1")
+
+        btn_register = findViewById(R.id.btn_register)
+        et_register_email = findViewById(R.id.et_register_email)
+        et_register_password = findViewById(R.id.et_register_password)
+        et_register_username = findViewById(R.id.et_register_username)
+        tv_login = findViewById(R.id.tv_login)
+
+
+        tv_login.setOnClickListener {
+
+            // startActivity(Intent(this@RegisterActivity, LoginActivity::class.java))
+            // user can press back key to previous page
+            // so alternative ways:
+            // user press back key then back to its home page, close the apps
+
+            onBackPressed()
+        }
+
+        btn_register.setOnClickListener {
+            // to check the presence of the empty email
+            // trim = cutting the empty space in email
+            // if no email  then display short toast
+            when {
+
+                TextUtils.isEmpty(et_register_username.text.toString(). trim{it <= ' '}) ->{
+                    Toast.makeText(this@RegisterActivity, "Please enter username",Toast.LENGTH_SHORT).show()
+                }
+
+                TextUtils.isEmpty(et_register_email.text.toString(). trim{it <= ' '}) ->{
+                    Toast.makeText(this@RegisterActivity, "Please enter email.",Toast.LENGTH_SHORT).show()
+                }
+
+                TextUtils.isEmpty(et_register_password.text.toString(). trim{it <= ' '}) ->{
+                    Toast.makeText(this@RegisterActivity, "Please enter password.",Toast.LENGTH_SHORT).show()
+                }
+
+
+                // if username, email and password checked and not empty
+                // oso trim the blank space in email/password
+                else ->{
+                    val email: String = et_register_email.text.toString(). trim{it <= ' '}
+                    val password: String = et_register_password.text.toString(). trim{it <= ' '}
+
+
+                    // Create an instance and create a register a suer with email and password
+                    // OnCompleteListener are mutiple overloads, task is one of the overload
+                    FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password).addOnCompleteListener(
+                        OnCompleteListener <AuthResult>{ task ->
+
+                            //If the registration is successfully done
+                            if (task.isSuccessful){
+
+                                    // Firebase registered user, create a firebase for user
+                                    // task will give result and user inside "result"
+                                val firebaseUser :FirebaseUser= task.result!!.user!!
+
+                                sendData()
+                                Toast.makeText(
+                                    this@RegisterActivity,
+                                    "You were registered successfully.",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+
+                                // sent user to from RegisterActivity to MainActivity
+                                // Android API only accept java so use class.java
+                                val intent = Intent(this@RegisterActivity, MainActivity::class.java)
+
+                                // getting rid of extra layers of activities we had
+                                // e.g. from Register to Login, Login to Register wil cause lot of instance so need to get rid of these
+                                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                                intent.putExtra("userid",firebaseUser.uid)
+                                intent.putExtra("emailid",email)
+                                startActivity(intent)
+                                finish() // get rid of other activities so that only left main activity
+                                         // even if user press back key, they cant get back to register/login activity, instead it will close apps
+                                         // if not, user can press back key to return the previous page
+
+                            }else{
+
+                                //If the registering is not successful then show error message.
+                                Toast.makeText(this@RegisterActivity,task.exception!!.message.toString(), Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    )
+                }
+            }
+        }
+
+    }
+
+    private fun sendData() {
+        var username = et_register_username.text.toString().trim()
+        var email = et_register_email.text.toString().trim()
+        var password = et_register_password.text.toString().trim()
+
+
+        val currentUser = auth.currentUser
+        val currentUserDV= reference.child(currentUser?.uid!!)
+        val currentUserDV2= reference2.child(currentUser?.uid!!)
+
+
+
+        currentUserDV.child("Username").setValue(username)
+        currentUserDV.child("Email").setValue(email)
+        currentUserDV.child("Password").setValue(password)
+
+        currentUserDV2.child("Data").setValue("0")
+
+        et_register_username.setText("")
+        et_register_email.setText("")
+        et_register_password.setText("")
+
+    }
+
+}
+
+/*private fun sendData() {
+        var username = et_register_username.text.toString().trim()
+        var email = et_register_email.text.toString().trim()
+        var password = et_register_password.text.toString().trim()
+
+        if (username.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()){
+            var model=DatabaseModel(username, email, password)
+            reference.child(username).setValue(model)
+            et_register_username.setText("")
+            et_register_email.setText("")
+            et_register_password.setText("")
+
+        }else{
+            Toast.makeText(applicationContext,"All field required", Toast.LENGTH_LONG).show()
+        }
+    }*/
+
+
+
