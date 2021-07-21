@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import kotlin.jvm.internal.MutablePropertyReference2
+
 
 
 class RegisterActivity : AppCompatActivity() {
@@ -22,7 +22,14 @@ class RegisterActivity : AppCompatActivity() {
     lateinit var  auth: FirebaseAuth
     private lateinit var database : FirebaseDatabase
     private lateinit var  reference: DatabaseReference
-    private lateinit var  reference2: DatabaseReference
+    private lateinit var  cup1: DatabaseReference
+    private lateinit var  cup2: DatabaseReference
+    private lateinit var  cup3: DatabaseReference
+    private lateinit var  cup4: DatabaseReference
+    private lateinit var  cup5: DatabaseReference
+    private lateinit var  cup6: DatabaseReference
+    private lateinit var  cup7: DatabaseReference
+    private lateinit var  cup8: DatabaseReference
 
 
     lateinit var btn_register: Button
@@ -30,6 +37,7 @@ class RegisterActivity : AppCompatActivity() {
     lateinit var et_register_password: EditText
     lateinit var et_register_username: EditText
     lateinit var tv_login: TextView
+    var i = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +46,14 @@ class RegisterActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance("https://fir-authdemo-5224c-default-rtdb.asia-southeast1.firebasedatabase.app/")
         reference = database.getReference("Users")
-        reference2 = database.getReference("Cup1")
+        cup1 = database.getReference("Cup1")
+        cup2 = database.getReference("Cup2")
+        cup3 = database.getReference("Cup3")
+        cup4 = database.getReference("Cup4")
+        cup5 = database.getReference("Cup5")
+        cup6 = database.getReference("Cup6")
+        cup7 = database.getReference("Cup7")
+        cup8 = database.getReference("Cup8")
 
         btn_register = findViewById(R.id.btn_register)
         et_register_email = findViewById(R.id.et_register_email)
@@ -46,14 +61,7 @@ class RegisterActivity : AppCompatActivity() {
         et_register_username = findViewById(R.id.et_register_username)
         tv_login = findViewById(R.id.tv_login)
 
-
         tv_login.setOnClickListener {
-
-            // startActivity(Intent(this@RegisterActivity, LoginActivity::class.java))
-            // user can press back key to previous page
-            // so alternative ways:
-            // user press back key then back to its home page, close the apps
-
             onBackPressed()
         }
 
@@ -77,7 +85,6 @@ class RegisterActivity : AppCompatActivity() {
 
 
                 // if username, email and password checked and not empty
-                // oso trim the blank space in email/password
                 else ->{
                     val email: String = et_register_email.text.toString(). trim{it <= ' '}
                     val password: String = et_register_password.text.toString(). trim{it <= ' '}
@@ -91,8 +98,8 @@ class RegisterActivity : AppCompatActivity() {
                             //If the registration is successfully done
                             if (task.isSuccessful){
 
-                                    // Firebase registered user, create a firebase for user
-                                    // task will give result and user inside "result"
+                                // Firebase registered user, create a firebase for user
+                                // task will give result and user inside "result"
                                 val firebaseUser :FirebaseUser= task.result!!.user!!
 
                                 sendData()
@@ -113,8 +120,8 @@ class RegisterActivity : AppCompatActivity() {
                                 intent.putExtra("emailid",email)
                                 startActivity(intent)
                                 finish() // get rid of other activities so that only left main activity
-                                         // even if user press back key, they cant get back to register/login activity, instead it will close apps
-                                         // if not, user can press back key to return the previous page
+                                // even if user press back key, they cant get back to register/login activity, instead it will close apps
+                                // if not, user can press back key to return the previous page
 
                             }else{
 
@@ -130,47 +137,42 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun sendData() {
-        var username = et_register_username.text.toString().trim()
-        var email = et_register_email.text.toString().trim()
-        var password = et_register_password.text.toString().trim()
+        val username = et_register_username.text.toString().trim()
+        val email = et_register_email.text.toString().trim()
+        val password = et_register_password.text.toString().trim()
 
 
         val currentUser = auth.currentUser
         val currentUserDV= reference.child(currentUser?.uid!!)
-        val currentUserDV2= reference2.child(currentUser?.uid!!)
-
-
-
         currentUserDV.child("Username").setValue(username)
         currentUserDV.child("Email").setValue(email)
         currentUserDV.child("Password").setValue(password)
 
-        currentUserDV2.child("Data").setValue("0")
+        val cup1 = cup1.child(currentUser?.uid!!)
+        val cup2 = cup2.child(currentUser?.uid!!)
+        val cup3 = cup3.child(currentUser?.uid!!)
+        val cup4 = cup4.child(currentUser?.uid!!)
+        val cup5 = cup5.child(currentUser?.uid!!)
+        val cup6 = cup6.child(currentUser?.uid!!)
+        val cup7 = cup7.child(currentUser?.uid!!)
+        val cup8 = cup8.child(currentUser?.uid!!)
 
-        et_register_username.setText("")
-        et_register_email.setText("")
-        et_register_password.setText("")
+
+        cup1.child("Data").setValue("0")
+        cup2.child("Data").setValue("0")
+        cup3.child("Data").setValue("0")
+        cup4.child("Data").setValue("0")
+        cup5.child("Data").setValue("0")
+        cup6.child("Data").setValue("0")
+        cup7.child("Data").setValue("0")
+        cup8.child("Data").setValue("0")
+
+
 
     }
 
 }
 
-/*private fun sendData() {
-        var username = et_register_username.text.toString().trim()
-        var email = et_register_email.text.toString().trim()
-        var password = et_register_password.text.toString().trim()
-
-        if (username.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()){
-            var model=DatabaseModel(username, email, password)
-            reference.child(username).setValue(model)
-            et_register_username.setText("")
-            et_register_email.setText("")
-            et_register_password.setText("")
-
-        }else{
-            Toast.makeText(applicationContext,"All field required", Toast.LENGTH_LONG).show()
-        }
-    }*/
 
 
 

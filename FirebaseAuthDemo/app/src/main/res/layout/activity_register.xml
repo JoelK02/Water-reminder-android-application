@@ -20,15 +20,36 @@
             android:layout_height="match_parent"
             android:contentDescription="image"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/water" />
+            app:srcCompat="@drawable/bckglogin8" />
     </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/bckglogin2"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/bckgcolour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/bckglogin11" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif"
         android:text="REGISTER SCREEN"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/fl_header_image" />
@@ -48,7 +69,11 @@
             android:id="@+id/et_register_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/lightblue"
+            android:fontFamily="sans-serif-black"
+            android:hint="Username"
             android:inputType="textPersonName"
+            android:textColor="@color/colorPrimaryDark"
             tools:text="Name" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -68,7 +93,10 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
+            android:background="@color/lightblue"
+            android:fontFamily="sans-serif-black"
             android:inputType="textEmailAddress"
+            android:textColor="@color/colorPrimaryDark"
             tools:text="abc@gmail.com" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -89,12 +117,15 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
+            android:background="@color/lightblue"
+            android:fontFamily="sans-serif-black"
             android:inputType="numberPassword"
+            android:textColor="@color/colorPrimaryDark"
             tools:text="123456" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -102,12 +133,15 @@
         android:layout_marginTop="200dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="230dp"
-        android:background="@color/colorAccent"
+        android:background="@color/matteblue"
+        android:fontFamily="sans-serif"
         android:foreground="?attr/selectableItemBackground"
         android:gravity="center"
         android:text="Register"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHighlight="@color/matteblue"
         android:textSize="18sp"
-        android:textStyle="bold"
+        android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -129,7 +163,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:padding="5dp"
-            android:text="Already have an account?" />
+            android:text="Already have an account?"
+            android:textColor="@color/darkgrey" />
 
         <TextView
             android:id="@+id/tv_login"
@@ -139,6 +174,7 @@
             android:layout_weight="1"
             android:padding="5dp"
             android:text="Login"
+            android:textColor="@color/darkgrey"
             android:textStyle="bold" />
     </LinearLayout>
 

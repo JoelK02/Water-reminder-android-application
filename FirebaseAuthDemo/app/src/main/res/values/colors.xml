@@ -10,4 +10,8 @@
     <color name="colorPrimaryDark">#222934</color>
     <color name="colorPrimary">#ED2173</color>
     <color name="colorAccent">#ED2173</color>
+    <color name="matteblue">#94C3F2</color>
+    <color name="darkgrey">#354054</color>
+    <color name="lightblue">#C4DCF5</color>
+
 </resources>
