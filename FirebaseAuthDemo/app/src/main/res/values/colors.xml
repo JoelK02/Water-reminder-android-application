@@ -13,5 +13,18 @@
     <color name="matteblue">#94C3F2</color>
     <color name="darkgrey">#354054</color>
     <color name="lightblue">#C4DCF5</color>
+    <color name="lightgray">#989898</color>
+    <color name="petal">#F98866</color>
+    <color name="Stem">#80BD9E</color>
+    <color name="Mist">#90AFC5</color>
+    <color name="AutumnFoliage">#763626</color>
+    <color name="shadow">#2A3132</color>
+    <color name="Moss">#AEBD38</color>
+    <color name="ThunderCloud">#505160</color>
+    <color name="Waterfall">#68829E</color>
+    <color name="Seafoam">#C4DFE6</color>
+    <color name="DeepAqua">#003B46</color>
+    <color name="Greenery">#6FB98F</color>
+    <color name="BlueBlack">#021C1E</color>
 
 </resources>
