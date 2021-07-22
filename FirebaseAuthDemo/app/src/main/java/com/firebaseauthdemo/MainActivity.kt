@@ -5,9 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
-import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import java.text.SimpleDateFormat
@@ -25,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var  cup6: DatabaseReference
     private lateinit var  cup7: DatabaseReference
     private lateinit var  cup8: DatabaseReference
+    private lateinit var  skin: DatabaseReference
 
 
 
@@ -39,6 +38,7 @@ class MainActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
+
         cup1 = database.getReference().child("Cup1")
         cup2 = database.getReference().child("Cup2")
         cup3 = database.getReference().child("Cup3")
@@ -47,17 +47,27 @@ class MainActivity : AppCompatActivity() {
         cup6 = database.getReference().child("Cup6")
         cup7 = database.getReference().child("Cup7")
         cup8 = database.getReference().child("Cup8")
+        skin = database.getReference().child("Users")
 
-
+        val user = auth.currentUser
         val btn_logout = findViewById<Button>(R.id.btn_logout)
+        val btn_change = findViewById<Button>(R.id.btn_change)
 
-        checkWater()
+        //checkWater()
 
         btn_logout.setOnClickListener {
             // Logout from app.
             FirebaseAuth.getInstance().signOut()
             startActivity(Intent(this@MainActivity, LoginActivity::class.java))
             finish() // exit from current activity
+
+        }
+        btn_change.setOnClickListener {
+            val glass1 = findViewById<ImageView>(R.id.glass1)
+            val skin = skin.child(user?.uid!!)
+  //          skin.child("Skin").setValue(R.drawable.glass_water)
+              glass1.setImageResource(SkinActivity().emt)
+
 
         }
     }
@@ -76,6 +86,7 @@ class MainActivity : AppCompatActivity() {
         val glass7 = findViewById<ImageView>(R.id.glass7)
         val glass8 = findViewById<ImageView>(R.id.glass8)
         val hour = SimpleDateFormat("HH").format(Calendar.getInstance().time).toInt()
+
 
 
         if (hour >= time && waterStatus == "0") {
@@ -300,7 +311,21 @@ class MainActivity : AppCompatActivity() {
         val cup6 = cup6.child(user.uid)
         val cup7 = cup7.child(user.uid)
         val cup8 = cup8.child(user.uid)
+        val skin = skin.child(user.uid)
 
+// Skin
+        skin.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+                val skin = snapshot.child("Skin").value.toString()
+                if (skin != null) {
+                    Skins(skin)
+                }
+            }
+            override fun onCancelled(error: DatabaseError) {
+                println("Error")
+            }
+        })
 // First Cup
         cup1.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -386,7 +411,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
 // Seventh Cup
-        cup2.addValueEventListener(object : ValueEventListener {
+        cup7.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val cup = "7"
                 val time = 10
@@ -430,6 +455,33 @@ class MainActivity : AppCompatActivity() {
         )
 
         return update
+    }
+
+    private fun skinPicker() {
+        val user = auth.currentUser
+        val skin = skin.child(user?.uid!!)
+
+
+
+// First Cup
+        skin.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+                val skin = snapshot.child("Skin").value.toString()
+                if (skin != null) {
+                    Skins(skin)
+                }
+            }
+            override fun onCancelled(error: DatabaseError) {
+                println("Error")
+            }
+        })
+    }
+
+    private fun Skins(skin: String) {
+        if (skin == "0") {
+          
+        }
     }
 
     }
