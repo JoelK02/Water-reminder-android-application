@@ -386,7 +386,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
 // Seventh Cup
-        cup2.addValueEventListener(object : ValueEventListener {
+        cup7.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val cup = "7"
                 val time = 10
@@ -427,9 +427,13 @@ class MainActivity : AppCompatActivity() {
         val update = mapOf<String,String>(
             "Data" to "1"
         // add cumulative score
+
         )
 
         return update
+    }
+    private fun addCoins() {
+
     }
 
     }
