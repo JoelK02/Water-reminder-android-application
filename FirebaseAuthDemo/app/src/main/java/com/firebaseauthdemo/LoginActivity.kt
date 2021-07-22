@@ -27,12 +27,12 @@ class LoginActivity : AppCompatActivity() {
         // if user login ady without logout, next time it will return to MainActivity but not Login Activity
         // .currentUser = to get the current user
         // if no user sign in , then .currentUser will return null
-        val currentuser = FirebaseAuth.getInstance().currentUser
-        if (currentuser != null){
+        //val currentuser = FirebaseAuth.getInstance().currentUser
+        //if (currentuser != null){
             // user is sign in
-            startActivity(Intent(this@LoginActivity, MainActivity::class.java))
-            finish()
-        }
+            //startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+            //finish()
+        //}
 
         tv_register = findViewById(R.id.tv_register)
         btn_login = findViewById(R.id.btn_login)
@@ -86,7 +86,7 @@ class LoginActivity : AppCompatActivity() {
 
                                 // sent user to from RegisterActivity to MainActivity
                                 // Android API only accept java so use class.java
-                                val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                                //val intent = Intent(this@LoginActivity, MainActivity::class.java)
 
                                 // getting rid of extra layers of activities we had
                                 // e.g. from Register to Login, Login to Register wil cause lot of instance so need to get rid of these

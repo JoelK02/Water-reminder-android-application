@@ -111,7 +111,7 @@ class RegisterActivity : AppCompatActivity() {
 
                                 // sent user to from RegisterActivity to MainActivity
                                 // Android API only accept java so use class.java
-                                val intent = Intent(this@RegisterActivity, MainActivity::class.java)
+                                //val intent = Intent(this@RegisterActivity, MainActivity::class.java)
 
                                 // getting rid of extra layers of activities we had
                                 // e.g. from Register to Login, Login to Register wil cause lot of instance so need to get rid of these

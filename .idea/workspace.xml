@@ -5,18 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fdd61ff-133a-43ef-b251-6671af18a279" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/res/drawable-v24/bckglogin11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/res/drawable-v24/bckglogin5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/res/drawable-v24/bckglogin6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/res/drawable-v24/bckglogin7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/res/drawable-v24/bckglogin8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/java/com/firebaseauthdemo/ToDoAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/java/com/firebaseauthdemo/ToDoListActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/java/com/firebaseauthdemo/ToDoModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/java/com/firebaseauthdemo/UpdateAndDelete.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/res/drawable/custom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/res/layout/activity_to_do_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/res/layout/row_itemslayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/java/com/firebaseauthdemo/RegisterActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/java/com/firebaseauthdemo/RegisterActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/java/com/firebaseauthdemo/tset.kt" beforeDir="false" afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/java/com/firebaseauthdemo/tset.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/res/layout/activity_forgot_password.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/res/layout/activity_forgot_password.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirebaseAuthDemo/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/res/layout/activity_login.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/res/layout/activity_register.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FirebaseAuthDemo/app/src/main/res/values/colors.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
