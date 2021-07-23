@@ -4,6 +4,126 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SkinShopActivity">
+    tools:context=".Main2Activity">
+
+    <ImageView
+        android:id="@+id/imgReturnPage"
+        android:layout_width="60dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_skinMugShop"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imgWoodenHome1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/return_page" />
+
+    <TextView
+        android:id="@+id/tv_skinMugShop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Skin Mug Shop"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/imgWoodenHome1"
+        app:layout_constraintStart_toStartOf="@+id/imgWoodenHome1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgWoodenHome1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wooden7" />
+
+    <ImageView
+        android:id="@+id/skinCup1"
+        android:layout_width="149dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/skinCup2"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="@+id/imgWoodenHome1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_skinMugShop"
+        app:srcCompat="@drawable/muscle_cup" />
+
+    <ImageView
+        android:id="@+id/skinCup2"
+        android:layout_width="154dp"
+        android:layout_height="197dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/imgWoodenHome1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_skinMugShop"
+        app:srcCompat="@drawable/hero_mug" />
+
+    <ImageView
+        android:id="@+id/imgWoodenHome2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="248dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wooden7" />
+
+    <ImageView
+        android:id="@+id/skinCup3"
+        android:layout_width="147dp"
+        android:layout_height="186dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/skinCup4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imgWoodenHome2"
+        app:layout_constraintTop_toTopOf="@+id/imgWoodenHome2"
+        app:srcCompat="@drawable/tigger_cup" />
+
+    <ImageView
+        android:id="@+id/skinCup4"
+        android:layout_width="153dp"
+        android:layout_height="192dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/imgWoodenHome2"
+        app:layout_constraintTop_toTopOf="@+id/imgWoodenHome2"
+        app:srcCompat="@drawable/sloth_mug" />
+
+    <ImageView
+        android:id="@+id/imgWoodenHome3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="460dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wooden7" />
+
+    <ImageView
+        android:id="@+id/skinCup5"
+        android:layout_width="126dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/skinCup6"
+        app:layout_constraintHorizontal_bias="0.594"
+        app:layout_constraintStart_toStartOf="@+id/imgWoodenHome3"
+        app:layout_constraintTop_toTopOf="@+id/imgWoodenHome3"
+        app:srcCompat="@drawable/gold_cup" />
+
+    <ImageView
+        android:id="@+id/skinCup6"
+        android:layout_width="148dp"
+        android:layout_height="191dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgWoodenHome3"
+        app:srcCompat="@drawable/mickey_cup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
