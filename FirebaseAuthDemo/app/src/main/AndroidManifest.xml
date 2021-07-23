@@ -10,16 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirebaseAuthDemo">
 
-        </activity>
+
         <activity android:name=".SkinShopActivity" >
 
         </activity>
         <activity android:name=".TimeScheduleActivity" >
 
         </activity>
-        <activity android:name=".HomePageActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".HomePageActivity"/>
+
 
         <activity android:name=".CoinsActivity">
 
