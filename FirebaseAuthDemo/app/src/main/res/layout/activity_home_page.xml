@@ -6,4 +6,196 @@
     android:layout_height="match_parent"
     tools:context=".HomePageActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="150dp">
+
+            <TextView
+                android:id="@+id/tv_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="100dp"
+                android:layout_weight="1"
+                android:text="Welcome to Hydrolert!"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Username"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+
+
+            app:columnCount="2"
+            app:columnOrderPreserved="false"
+            app:alignmentMode="alignMargins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:rowCount="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imgNotes"
+                        android:layout_width="88dp"
+                        android:layout_height="88dp"
+                        android:src="@drawable/notes_home_pg" />
+
+                    <TextView
+                        android:id="@+id/tv_todolist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="To-Do-List"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imgWater"
+                        android:layout_width="88dp"
+                        android:layout_height="88dp"
+                        android:src="@drawable/water_home_pg" />
+
+                    <TextView
+                        android:id="@+id/tv_hydroAlert"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Hydro Alert"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_TipsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_weight="1"
+                android:text="Tips of a day "
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_tipsWay"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Best Time to Drink Water"
+                android:layout_marginStart="30dp"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tv_tips1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1. Consume one to two cups of water when you wake up."
+                android:layout_marginStart="30dp"/>
+
+            <TextView
+                android:id="@+id/tv_tips2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Drink a glass of water to regulate hunger."
+                android:layout_marginStart="30dp"/>
+
+            <TextView
+                android:id="@+id/tv_tips3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Cure midafternoon slump by drinking water."
+                android:layout_marginStart="30dp"/>
+
+            <TextView
+                android:id="@+id/tv_tips4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Have a sip or two of water before bedtime."
+                android:layout_marginStart="30dp"/>
+
+            <TextView
+                android:id="@+id/tv_tips5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. Drink H20 when you headache."
+                android:layout_marginStart="30dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
