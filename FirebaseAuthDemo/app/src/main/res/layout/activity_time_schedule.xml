@@ -6,4 +6,401 @@
     android:layout_height="match_parent"
     tools:context=".TimeScheduleActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/returnIcon"
+                android:layout_width="48dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                app:srcCompat="@drawable/return_page" />
+
+            <TextView
+                android:id="@+id/tv_timeSchedule"
+                android:layout_width="229dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/almendra_sc"
+                android:textStyle="bold"
+                android:text="Time  Schedule"
+                android:textColor="@color/DeepAqua"
+                android:textSize="30sp"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#F1A5A5"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgTime1"
+                android:layout_width="87dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/time" />
+
+            <TextView
+                android:id="@+id/tv_Mug1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/almendra_sc"
+                android:text="Mug 1 : "
+                android:textColor="@color/DeepAqua"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtTime1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:inputType="numberDecimal"
+                android:text="00.00"
+                android:textColor="@color/DeepAqua" />
+
+            <TextView
+                android:id="@+id/tv_am1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:text="am"
+
+                android:textColor="@color/DeepAqua"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#F1C4AF"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgTime2"
+                android:layout_width="89dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/time" />
+
+            <TextView
+                android:id="@+id/tv_Mug2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/almendra_sc"
+                android:text="Mug 2 : "
+                android:textColor="@color/DeepAqua"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtTime2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/DeepAqua"
+                android:text="00.00" />
+
+            <TextView
+                android:id="@+id/tv_am2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="am"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/DeepAqua"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#F1E89A"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgTime3"
+                android:layout_width="86dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/time" />
+
+            <TextView
+                android:id="@+id/tv_Mug3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mug 3 : "
+                android:fontFamily="@font/almendra_sc"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/DeepAqua"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edtTime3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/DeepAqua"
+                android:text="00.00" />
+
+            <TextView
+                android:id="@+id/tv_am3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="am"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/DeepAqua"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#B4F697"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgTime4"
+                android:layout_width="86dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:layout_marginTop="12dp"
+                app:srcCompat="@drawable/time" />
+
+            <TextView
+                android:id="@+id/tv_Mug4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mug 4 : "
+                android:fontFamily="@font/almendra_sc"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/DeepAqua"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edtTime4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/DeepAqua"
+                android:text="00.00" />
+
+            <TextView
+                android:id="@+id/tv_am4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="12dp"
+                android:text="am"
+                android:textColor="@color/DeepAqua"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#9FF6EF"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgTime5"
+                android:layout_width="84dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:layout_marginTop="12dp"
+                app:srcCompat="@drawable/time" />
+
+            <TextView
+                android:id="@+id/tv_Mug5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mug 5 : "
+                android:fontFamily="@font/almendra_sc"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/DeepAqua"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edtTime5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/DeepAqua"
+                android:text="00.00" />
+
+            <TextView
+                android:id="@+id/tv_am5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="am"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/DeepAqua"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#9FCFF3"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgTime6"
+                android:layout_width="82dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:layout_marginTop="12dp"
+                app:srcCompat="@drawable/time" />
+
+            <TextView
+                android:id="@+id/tv_Mug6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mug 6 : "
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/almendra_sc"
+                android:textStyle="bold"
+                android:textColor="@color/DeepAqua"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edtTime6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/DeepAqua"
+                android:text="00.00" />
+
+            <TextView
+                android:id="@+id/tv_am6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="am"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/DeepAqua"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#D4A7F1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgTime7"
+                android:layout_width="83dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:layout_marginTop="12dp"
+                app:srcCompat="@drawable/time" />
+
+            <TextView
+                android:id="@+id/tv_Mug7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mug 7 : "
+                android:fontFamily="@font/almendra_sc"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/DeepAqua"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edtTime7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:inputType="numberDecimal"
+                android:textColor="@color/DeepAqua"
+                android:text="00.00" />
+
+            <TextView
+                android:id="@+id/tv_am7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="12dp"
+                android:text="am"
+                android:textColor="@color/DeepAqua"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#EFB7F1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgTime8"
+                android:layout_width="80dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:layout_marginTop="12dp"
+                app:srcCompat="@drawable/time" />
+
+            <TextView
+                android:id="@+id/tv_Mug8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mug 8 : "
+                android:fontFamily="@font/almendra_sc"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/DeepAqua"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edtTime8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/DeepAqua"
+                android:text="00.00" />
+
+            <TextView
+                android:id="@+id/tv_am8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="12dp"
+                android:text="am"
+                android:textColor="@color/DeepAqua"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

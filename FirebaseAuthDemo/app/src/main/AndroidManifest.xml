@@ -13,20 +13,28 @@
 
         </activity>
         <activity android:name=".SkinShopActivity" >
+
+        </activity>
+        <activity android:name=".TimeScheduleActivity" >
+
+        </activity>
+        <activity android:name=".HomePageActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TimeScheduleActivity" />
-        <activity android:name=".HomePageActivity" />
         <activity android:name=".ForgotPasswordActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity">
 
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
