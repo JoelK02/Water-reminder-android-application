@@ -56,7 +56,7 @@
         app:layout_constraintEnd_toStartOf="@+id/cup2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/imgWoodenHome1"
-        app:srcCompat="@drawable/tigger_cup" />
+        app:srcCompat="@drawable/glass_water" />
 
     <ImageView
         android:id="@+id/cup2"
@@ -66,18 +66,19 @@
         app:layout_constraintBottom_toBottomOf="@+id/imgWoodenHome1"
         app:layout_constraintEnd_toEndOf="@+id/imgWoodenHome1"
         app:layout_constraintStart_toStartOf="@+id/imgWoodenHome1"
-        app:srcCompat="@drawable/tigger_cup" />
+        app:srcCompat="@drawable/glass_water" />
 
     <ImageView
         android:id="@+id/cup3"
         android:layout_width="111dp"
         android:layout_height="114dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginBottom="44dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgWoodenHome1"
         app:layout_constraintEnd_toEndOf="@+id/imgWoodenHome1"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.605"
         app:layout_constraintStart_toEndOf="@+id/cup2"
-        app:srcCompat="@drawable/tigger_cup" />
+        app:srcCompat="@drawable/glass_water" />
 
     <ImageView
         android:id="@+id/imgWoodenHome2"
@@ -100,7 +101,7 @@
         app:layout_constraintEnd_toStartOf="@+id/cup2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/imgWoodenHome1"
-        app:srcCompat="@drawable/tigger_cup" />
+        app:srcCompat="@drawable/glass_water" />
 
     <ImageView
         android:id="@+id/cup5"
@@ -110,7 +111,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/imgWoodenHome2"
         app:layout_constraintEnd_toEndOf="@+id/imgWoodenHome1"
         app:layout_constraintStart_toStartOf="@+id/imgWoodenHome1"
-        app:srcCompat="@drawable/tigger_cup" />
+        app:srcCompat="@drawable/glass_water" />
 
     <ImageView
         android:id="@+id/cup6"
@@ -119,9 +120,9 @@
         android:layout_marginBottom="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgWoodenHome2"
         app:layout_constraintEnd_toEndOf="@+id/imgWoodenHome1"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.615"
         app:layout_constraintStart_toEndOf="@+id/cup2"
-        app:srcCompat="@drawable/tigger_cup" />
+        app:srcCompat="@drawable/glass_water" />
 
     <ImageView
         android:id="@+id/imgWoodenHome3"
@@ -143,7 +144,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/imgWoodenHome3"
         app:layout_constraintEnd_toStartOf="@+id/cup8"
         app:layout_constraintStart_toStartOf="@+id/imgWoodenHome3"
-        app:srcCompat="@drawable/tigger_cup" />
+        app:srcCompat="@drawable/glass_water" />
 
     <ImageView
         android:id="@+id/cup8"
@@ -153,7 +154,7 @@
         android:layout_marginBottom="44dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgWoodenHome3"
         app:layout_constraintEnd_toEndOf="@+id/imgWoodenHome3"
-        app:srcCompat="@drawable/tigger_cup" />
+        app:srcCompat="@drawable/glass_water" />
 
     <ImageView
         android:id="@+id/imgTime"
@@ -181,11 +182,10 @@
         android:id="@+id/imgCoin"
         android:layout_width="52dp"
         android:layout_height="35dp"
-        android:layout_marginEnd="129dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imgTime"
-        app:layout_constraintStart_toEndOf="@+id/tvCoinsEarned"
         app:srcCompat="@drawable/dogecoin" />
 
     <TextView
@@ -194,7 +194,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
         android:layout_marginBottom="12dp"
-        android:text="20"
+        android:text="201"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvHome" />
