@@ -31,6 +31,13 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var  cup7: DatabaseReference
     private lateinit var  cup8: DatabaseReference
 
+    private lateinit var  skin1: DatabaseReference
+    private lateinit var  skin2: DatabaseReference
+    private lateinit var  skin3: DatabaseReference
+    private lateinit var  skin4: DatabaseReference
+    private lateinit var  skin5: DatabaseReference
+    private lateinit var  skin6: DatabaseReference
+
 
     lateinit var btn_register: Button
     lateinit var et_register_email: EditText
@@ -46,6 +53,7 @@ class RegisterActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance("https://fir-authdemo-5224c-default-rtdb.asia-southeast1.firebasedatabase.app/")
         reference = database.getReference("Users")
+
         cup1 = database.getReference("Cup1")
         cup2 = database.getReference("Cup2")
         cup3 = database.getReference("Cup3")
@@ -54,6 +62,13 @@ class RegisterActivity : AppCompatActivity() {
         cup6 = database.getReference("Cup6")
         cup7 = database.getReference("Cup7")
         cup8 = database.getReference("Cup8")
+
+        skin1 = database.getReference("Skin1")
+        skin2 = database.getReference("Skin2")
+        skin3 = database.getReference("Skin3")
+        skin4 = database.getReference("Skin4")
+        skin5 = database.getReference("Skin5")
+        skin6 = database.getReference("Skin6")
 
         btn_register = findViewById(R.id.btn_register)
         et_register_email = findViewById(R.id.et_register_email)
@@ -147,6 +162,8 @@ class RegisterActivity : AppCompatActivity() {
         currentUserDV.child("Username").setValue(username)
         currentUserDV.child("Email").setValue(email)
         currentUserDV.child("Password").setValue(password)
+        currentUserDV.child("Skin").setValue("0")
+        currentUserDV.child("Coins").setValue(0)
 
         val cup1 = cup1.child(currentUser?.uid!!)
         val cup2 = cup2.child(currentUser?.uid!!)
@@ -157,6 +174,13 @@ class RegisterActivity : AppCompatActivity() {
         val cup7 = cup7.child(currentUser?.uid!!)
         val cup8 = cup8.child(currentUser?.uid!!)
 
+        val skin1 = skin1.child(currentUser?.uid!!)
+        val skin2 = skin2.child(currentUser?.uid!!)
+        val skin3 = skin3.child(currentUser?.uid!!)
+        val skin4 = skin4.child(currentUser?.uid!!)
+        val skin5 = skin5.child(currentUser?.uid!!)
+        val skin6 = skin6.child(currentUser?.uid!!)
+
 
         cup1.child("Data").setValue("0")
         cup2.child("Data").setValue("0")
@@ -166,6 +190,13 @@ class RegisterActivity : AppCompatActivity() {
         cup6.child("Data").setValue("0")
         cup7.child("Data").setValue("0")
         cup8.child("Data").setValue("0")
+
+        skin1.child("Status").setValue("0")
+        skin2.child("Status").setValue("0")
+        skin3.child("Status").setValue("0")
+        skin4.child("Status").setValue("0")
+        skin5.child("Status").setValue("0")
+        skin6.child("Status").setValue("0")
 
 
 

@@ -93,6 +93,16 @@
         app:layout_constraintTop_toTopOf="@+id/imgCoin1"
         app:layout_constraintVertical_bias="0.2" />
 
+    <TextView
+        android:id="@+id/tv_render_coins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:text="200"
+        app:layout_constraintEnd_toStartOf="@+id/imgCoin7"
+        app:layout_constraintTop_toBottomOf="@+id/imgCoin5" />
+
     <ImageView
         android:id="@+id/imgCoin1"
         android:layout_width="33dp"
@@ -274,16 +284,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imgWoodenHome3"
         app:layout_constraintTop_toBottomOf="@+id/tv_skinCup5" />
-
-    <TextView
-        android:id="@+id/tv_render_coins"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        android:text="200"
-        app:layout_constraintEnd_toStartOf="@+id/imgCoin7"
-        app:layout_constraintTop_toBottomOf="@+id/imgCoin5" />
 
     <ImageView
         android:id="@+id/imgCoin7"

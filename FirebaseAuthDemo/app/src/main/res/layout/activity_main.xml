@@ -11,6 +11,14 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="23dp"
+            android:layout_margin="16dp"
+            android:background="@color/purple_200"
+            android:text="Logout" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -86,18 +94,17 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_change"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="23dp"
             android:layout_margin="16dp"
             android:background="@color/purple_200"
-            android:text="change" />
+            android:text="refresh" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_logout"
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:background="@color/purple_200"
-            android:text="Logout" />
+            android:text="TextView" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
