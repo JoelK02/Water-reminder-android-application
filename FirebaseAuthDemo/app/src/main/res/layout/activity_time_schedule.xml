@@ -9,7 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/bckg9">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,12 +32,11 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="20dp"
                 android:layout_weight="1"
-                android:fontFamily="@font/almendra_sc"
-                android:textStyle="bold"
+                android:fontFamily="@font/amatica_sc"
                 android:text="Time  Schedule"
                 android:textColor="@color/DeepAqua"
-                android:textSize="30sp"
-                 />
+                android:textSize="39sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -58,11 +58,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:fontFamily="@font/almendra_sc"
+                android:fontFamily="sans-serif"
                 android:text="Mug 1 : "
                 android:textColor="@color/DeepAqua"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="normal" />
 
             <EditText
                 android:id="@+id/edtTime1"
@@ -112,11 +112,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:fontFamily="@font/almendra_sc"
+                android:fontFamily="sans-serif"
                 android:text="Mug 2 : "
                 android:textColor="@color/DeepAqua"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="normal" />
 
             <EditText
                 android:id="@+id/edtTime2"
@@ -165,12 +165,12 @@
                 android:id="@+id/tv_Mug3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mug 3 : "
-                android:fontFamily="@font/almendra_sc"
-                android:textStyle="bold"
                 android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif"
+                android:text="Mug 3 : "
                 android:textColor="@color/DeepAqua"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="normal" />
 
             <EditText
                 android:id="@+id/edtTime3"
@@ -219,12 +219,12 @@
                 android:id="@+id/tv_Mug4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mug 4 : "
-                android:fontFamily="@font/almendra_sc"
-                android:textStyle="bold"
                 android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif"
+                android:text="Mug 4 : "
                 android:textColor="@color/DeepAqua"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="normal" />
 
             <EditText
                 android:id="@+id/edtTime4"
@@ -272,12 +272,12 @@
                 android:id="@+id/tv_Mug5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mug 5 : "
-                android:fontFamily="@font/almendra_sc"
-                android:textStyle="bold"
                 android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif"
+                android:text="Mug 5 : "
                 android:textColor="@color/DeepAqua"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="normal" />
 
             <EditText
                 android:id="@+id/edtTime5"
@@ -325,12 +325,12 @@
                 android:id="@+id/tv_Mug6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mug 6 : "
                 android:layout_marginTop="12dp"
-                android:fontFamily="@font/almendra_sc"
-                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:text="Mug 6 : "
                 android:textColor="@color/DeepAqua"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="normal" />
 
             <EditText
                 android:id="@+id/edtTime6"
@@ -378,12 +378,12 @@
                 android:id="@+id/tv_Mug7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mug 7 : "
-                android:fontFamily="@font/almendra_sc"
-                android:textStyle="bold"
                 android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif"
+                android:text="Mug 7 : "
                 android:textColor="@color/DeepAqua"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="normal" />
 
             <EditText
                 android:id="@+id/edtTime7"
@@ -431,12 +431,12 @@
                 android:id="@+id/tv_Mug8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mug 8 : "
-                android:fontFamily="@font/almendra_sc"
-                android:textStyle="bold"
                 android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif"
+                android:text="Mug 8 : "
                 android:textColor="@color/DeepAqua"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="normal" />
 
             <EditText
                 android:id="@+id/edtTime8"

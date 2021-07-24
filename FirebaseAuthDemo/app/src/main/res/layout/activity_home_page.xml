@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePageActivity">
+    tools:context=".HomePageActivity"
+    android:background="@drawable/homebckg">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,11 +22,14 @@
                 android:id="@+id/tv_welcome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginTop="100dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/amatica_sc"
+                android:gravity="center"
                 android:text="Welcome to Hydrolert!"
-                android:textSize="30sp" />
+                android:textColor="@color/DeepAqua"
+                android:textSize="39sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -40,9 +44,12 @@
                 android:layout_height="wrap_content"
 
                 android:layout_weight="1"
+                android:fontFamily="@font/amatica_sc"
                 android:gravity="center"
                 android:text="Username"
-                android:textSize="24sp" />
+                android:textColor="@color/DeepAqua"
+                android:textSize="39sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <androidx.gridlayout.widget.GridLayout
@@ -62,14 +69,17 @@
                 android:layout_margin="12dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="6dp"
+
                 app:layout_columnWeight="1"
-                app:layout_rowWeight="1">
+                app:layout_rowWeight="1"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical"
+                    android:background="@color/beige"
                     android:padding="16dp">
 
                     <ImageView
@@ -84,7 +94,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="To-Do-List"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/DeepAqua"
                         android:textSize="18sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -105,6 +115,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical"
+                    android:background="@color/beige"
                     android:padding="16dp">
 
                     <ImageView
@@ -119,7 +130,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="Hydro Alert"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/DeepAqua"
                         android:textSize="18sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -141,61 +152,93 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="30dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/amatica_sc"
                 android:text="Tips of a day "
-                android:textSize="24sp" />
+                android:textColor="@color/DeepAqua"
+                android:textSize="34sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/beige"
+            >
 
             <TextView
                 android:id="@+id/tv_tipsWay"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
+                android:layout_marginStart="10dp"
                 android:text="Best Time to Drink Water"
-                android:layout_marginStart="30dp"
-                android:textSize="18sp"/>
+                android:textColor="@color/DeepAqua"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv_tips1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_weight="1"
                 android:text="1. Consume one to two cups of water when you wake up."
-                android:layout_marginStart="30dp"/>
+                android:textColor="@color/DeepAqua" />
 
             <TextView
                 android:id="@+id/tv_tips2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:text="2. Drink a glass of water to regulate hunger."
-                android:layout_marginStart="30dp"/>
+                android:textColor="@color/DeepAqua" />
 
             <TextView
                 android:id="@+id/tv_tips3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:text="3. Cure midafternoon slump by drinking water."
-                android:layout_marginStart="30dp"/>
+                android:textColor="@color/DeepAqua" />
 
             <TextView
                 android:id="@+id/tv_tips4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:text="4. Have a sip or two of water before bedtime."
-                android:layout_marginStart="30dp"/>
+                android:textColor="@color/DeepAqua" />
 
             <TextView
                 android:id="@+id/tv_tips5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:text="5. Drink H20 when you headache."
-                android:layout_marginStart="30dp"/>
+                android:textColor="@color/DeepAqua" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="120dp"
+                android:layout_weight="1"
+                android:text="Logout"
+                android:textColor="@color/DeepAqua"
+                android:background="@color/lightblue"/>
         </LinearLayout>
 
 

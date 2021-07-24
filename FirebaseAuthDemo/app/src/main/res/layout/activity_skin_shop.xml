@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main2Activity">
+    tools:context=".Main2Activity"
+    android:background="@drawable/bckg22">
 
     <ImageView
         android:id="@+id/defaultSkin"
@@ -32,9 +33,11 @@
         android:id="@+id/tv_skinMugShop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/amatica_sc"
         android:text="Skin Mug Shop"
-        android:textSize="20sp"
+        android:textSize="39sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imgWoodenHome1"
         app:layout_constraintStart_toStartOf="@+id/imgWoodenHome1"
         app:layout_constraintTop_toTopOf="parent" />
@@ -43,7 +46,7 @@
         android:id="@+id/imgWoodenHome1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,8 +55,8 @@
 
     <ImageView
         android:id="@+id/skinCup2"
-        android:layout_width="142dp"
-        android:layout_height="184dp"
+        android:layout_width="140dp"
+        android:layout_height="162dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="@+id/imgWoodenHome1"
@@ -64,7 +67,7 @@
         android:id="@+id/imgWoodenHome2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="228dp"
+        android:layout_marginTop="215dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,61 +79,65 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="60"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/imgCoin2"
         app:layout_constraintEnd_toStartOf="@+id/imgCoin2"
         app:layout_constraintTop_toTopOf="@+id/imgCoin2"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/tv_skinCup1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
+        android:fontFamily="sans-serif"
         android:text="40"
+        android:textSize="18sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="@+id/imgCoin1"
         app:layout_constraintEnd_toStartOf="@+id/imgCoin1"
         app:layout_constraintStart_toStartOf="@+id/imgWoodenHome1"
         app:layout_constraintTop_toTopOf="@+id/imgCoin1"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imgCoin1"
-        android:layout_width="33dp"
-        android:layout_height="24dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgWoodenHome1"
         app:layout_constraintStart_toEndOf="@+id/tv_skinCup1"
         app:layout_constraintTop_toTopOf="@+id/imgWoodenHome2"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/dogecoin" />
 
     <ImageView
         android:id="@+id/imgCoin2"
-        android:layout_width="33dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="92dp"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="88dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgWoodenHome1"
         app:layout_constraintEnd_toEndOf="@+id/imgWoodenHome1"
         app:layout_constraintTop_toTopOf="@+id/imgWoodenHome2"
-        app:layout_constraintVertical_bias="0.666"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/dogecoin" />
 
     <ImageView
         android:id="@+id/skinCup1"
         android:layout_width="140dp"
-        android:layout_height="182dp"
+        android:layout_height="162dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toStartOf="@+id/skinCup2"
-        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintStart_toStartOf="@+id/imgWoodenHome1"
         app:layout_constraintTop_toBottomOf="@+id/tv_skinMugShop"
         app:srcCompat="@drawable/muscle_cup" />
 
     <ImageView
         android:id="@+id/skinCup4"
-        android:layout_width="144dp"
-        android:layout_height="179dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="140dp"
+        android:layout_height="162dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="@+id/imgWoodenHome2"
         app:layout_constraintTop_toTopOf="@+id/imgWoodenHome2"
@@ -138,12 +145,12 @@
 
     <ImageView
         android:id="@+id/skinCup3"
-        android:layout_width="139dp"
-        android:layout_height="173dp"
+        android:layout_width="140dp"
+        android:layout_height="162dp"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="52dp"
         app:layout_constraintEnd_toStartOf="@+id/skinCup4"
-        app:layout_constraintHorizontal_bias="0.255"
+        app:layout_constraintHorizontal_bias="0.127"
         app:layout_constraintStart_toStartOf="@+id/imgWoodenHome2"
         app:layout_constraintTop_toTopOf="@+id/imgWoodenHome2"
         app:srcCompat="@drawable/sloth_mug" />
@@ -153,6 +160,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="150"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/imgCoin4"
         app:layout_constraintEnd_toStartOf="@+id/imgCoin4"
         app:layout_constraintTop_toTopOf="@+id/imgCoin4"
@@ -165,45 +173,48 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="4dp"
         android:text="200"
+        android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/imgCoin7"
-        app:layout_constraintTop_toBottomOf="@+id/imgCoin5" />
+        app:layout_constraintTop_toBottomOf="@+id/imgWoodenHome3" />
 
     <TextView
         android:id="@+id/tv_skinCup3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
+        android:layout_marginStart="72dp"
         android:text="80"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/imgCoin3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imgCoin3"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintVertical_bias="0.666" />
 
     <ImageView
         android:id="@+id/imgCoin3"
-        android:layout_width="33dp"
-        android:layout_height="24dp"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgWoodenHome2"
         app:layout_constraintStart_toEndOf="@+id/tv_skinCup3"
         app:layout_constraintTop_toTopOf="@+id/imgWoodenHome3"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/dogecoin" />
 
     <ImageView
         android:id="@+id/imgCoin4"
-        android:layout_width="33dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="96dp"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="84dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgWoodenHome2"
         app:layout_constraintEnd_toEndOf="@+id/imgWoodenHome2"
         app:layout_constraintTop_toTopOf="@+id/imgWoodenHome3"
-        app:layout_constraintVertical_bias="0.625"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/dogecoin" />
 
     <ImageView
         android:id="@+id/imgWoodenHome3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="448dp"
+        android:layout_marginTop="430dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -212,8 +223,8 @@
 
     <ImageView
         android:id="@+id/skinCup6"
-        android:layout_width="139dp"
-        android:layout_height="170dp"
+        android:layout_width="140dp"
+        android:layout_height="162dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -224,28 +235,28 @@
         android:id="@+id/tv_skinCup5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="72dp"
         android:text="170"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/imgCoin5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imgCoin5"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.666" />
 
     <TextView
         android:id="@+id/tv_skinCup6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="250"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/imgCoin6"
         app:layout_constraintEnd_toStartOf="@+id/imgCoin6"
-        app:layout_constraintTop_toTopOf="@+id/imgCoin6"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintTop_toTopOf="@+id/imgCoin6" />
 
     <ImageView
         android:id="@+id/imgCoin5"
-        android:layout_width="33dp"
-        android:layout_height="24dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgWoodenHome3"
         app:layout_constraintEnd_toStartOf="@+id/tv_skinCup6"
         app:layout_constraintHorizontal_bias="0.0"
@@ -254,10 +265,9 @@
 
     <ImageView
         android:id="@+id/imgCoin6"
-        android:layout_width="33dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="84dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgWoodenHome3"
         app:layout_constraintEnd_toEndOf="@+id/imgWoodenHome3"
         app:srcCompat="@drawable/dogecoin" />
@@ -265,10 +275,10 @@
     <ImageView
         android:id="@+id/skinCup5"
         android:layout_width="110dp"
-        android:layout_height="146dp"
-        android:layout_marginTop="44dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="52dp"
         app:layout_constraintEnd_toStartOf="@+id/skinCup6"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="@+id/imgWoodenHome3"
         app:layout_constraintTop_toTopOf="@+id/imgWoodenHome3"
         app:srcCompat="@drawable/gold_cup" />
@@ -278,21 +288,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="Current Coins:  +"
+        android:layout_marginTop="16dp"
+        android:text="Current Coins:  "
+        android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/tv_render_coins"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imgWoodenHome3"
-        app:layout_constraintTop_toBottomOf="@+id/tv_skinCup5" />
+        app:layout_constraintTop_toBottomOf="@+id/imgWoodenHome3" />
 
     <ImageView
         android:id="@+id/imgCoin7"
-        android:layout_width="30dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="212dp"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="200dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_skinCup6"
+        app:layout_constraintTop_toBottomOf="@+id/imgWoodenHome3"
         app:srcCompat="@drawable/dogecoin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

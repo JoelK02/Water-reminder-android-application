@@ -13,12 +13,17 @@
 
         <activity android:name=".SkinShopActivity" >
 
+
         </activity>
         <activity android:name=".TimeScheduleActivity" >
 
         </activity>
         <activity android:name=".HomePageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
 
@@ -29,13 +34,10 @@
         <activity android:name=".RegisterActivity"/>
 
         <activity android:name=".MainActivity" >
+
         </activity>
         <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data
