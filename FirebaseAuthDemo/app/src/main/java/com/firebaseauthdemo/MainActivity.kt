@@ -268,7 +268,7 @@ class MainActivity : AppCompatActivity() {
         coinz.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
 
-                val Coins = snapshot.child("Coins").value.toString().toInt()
+                val Coins = Integer.parseInt(snapshot.child("Coins").value.toString())
                 tx.text = Coins.toString()
 
             }
