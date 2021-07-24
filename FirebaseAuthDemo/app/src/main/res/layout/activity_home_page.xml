@@ -56,20 +56,21 @@
             app:rowCount="1">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_columnWeight="1"
-                app:layout_rowWeight="1"
-                app:cardElevation="6dp"
+                android:layout_margin="12dp"
                 app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardElevation="6dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
 
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
                     <ImageView
                         android:id="@+id/imgNotes"
@@ -90,20 +91,21 @@
 
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_columnWeight="1"
-                app:layout_rowWeight="1"
-                app:cardElevation="6dp"
+                android:layout_margin="12dp"
                 app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardElevation="6dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
 
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
                     <ImageView
                         android:id="@+id/imgWater"

@@ -17,7 +17,9 @@
         <activity android:name=".TimeScheduleActivity" >
 
         </activity>
-        <activity android:name=".HomePageActivity"/>
+        <activity android:name=".HomePageActivity">
+
+        </activity>
 
 
         <activity android:name=".CoinsActivity">

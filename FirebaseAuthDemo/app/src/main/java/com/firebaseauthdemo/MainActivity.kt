@@ -88,8 +88,7 @@ class MainActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val currentDate = SimpleDateFormat("DD").format(Calendar.getInstance().time).toInt()
                 val skin = snapshot.child("Skin").value.toString()
-                val pastDate = snapshot.child("PastDate").value.toString().toInt()
-
+                val pastDate = Integer.parseInt(snapshot.child("PastDate").value.toString())
                 val emptySkin = SkinActivity().Skin1(skin)
                 val waterSkin = SkinActivity().Skin2(skin)
 

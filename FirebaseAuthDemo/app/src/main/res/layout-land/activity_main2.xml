@@ -7,26 +7,16 @@
     tools:context=".Main2Activity">
 
     <ImageView
-        android:id="@+id/imgRefresh"
-        android:layout_width="27dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imgWoodenHome1"
-        app:srcCompat="@drawable/refresh" />
-
-    <ImageView
         android:id="@+id/imgHome"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginStart="188dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="685dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imgTrolley"
-        app:layout_constraintStart_toEndOf="@+id/imgRefresh"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic__home_24" />
 
     <ImageView
@@ -34,12 +24,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="649dp"
         app:layout_constraintBottom_toTopOf="@+id/imgTime"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/trolley_icon" />
 
     <ImageView

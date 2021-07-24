@@ -83,6 +83,14 @@
 
                 android:textColor="@color/DeepAqua"
                 android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/img_exchange1"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="40dp"
+                android:layout_width="21dp"
+                android:layout_height="45dp"
+                app:srcCompat="@drawable/exchange" />
         </LinearLayout>
 
         <LinearLayout
@@ -128,6 +136,14 @@
                 android:layout_marginTop="12dp"
                 android:textColor="@color/DeepAqua"
                 android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/img_exchange2"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="40dp"
+                android:layout_width="21dp"
+                android:layout_height="45dp"
+                app:srcCompat="@drawable/exchange" />
 
         </LinearLayout>
 
@@ -175,6 +191,14 @@
                 android:textColor="@color/DeepAqua"
                 android:textSize="18sp" />
 
+            <ImageView
+                android:id="@+id/img_exchange3"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="40dp"
+                android:layout_width="21dp"
+                android:layout_height="45dp"
+                app:srcCompat="@drawable/exchange" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -215,11 +239,19 @@
                 android:id="@+id/tv_am4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginTop="12dp"
-                android:text="am"
+                android:layout_weight="1"
+                android:text="pm"
                 android:textColor="@color/DeepAqua"
                 android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/img_exchange4"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="40dp"
+                android:layout_width="21dp"
+                android:layout_height="45dp"
+                app:srcCompat="@drawable/exchange" />
         </LinearLayout>
 
         <LinearLayout
@@ -260,11 +292,19 @@
                 android:id="@+id/tv_am5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="am"
                 android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:text="pm"
                 android:textColor="@color/DeepAqua"
                 android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/img_exchange5"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="40dp"
+                android:layout_width="21dp"
+                android:layout_height="45dp"
+                app:srcCompat="@drawable/exchange" />
         </LinearLayout>
 
         <LinearLayout
@@ -305,11 +345,19 @@
                 android:id="@+id/tv_am6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="am"
                 android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:text="pm"
                 android:textColor="@color/DeepAqua"
                 android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/img_exchange6"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="40dp"
+                android:layout_width="21dp"
+                android:layout_height="45dp"
+                app:srcCompat="@drawable/exchange" />
         </LinearLayout>
 
         <LinearLayout
@@ -350,11 +398,19 @@
                 android:id="@+id/tv_am7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginTop="12dp"
-                android:text="am"
+                android:layout_weight="1"
+                android:text="pm"
                 android:textColor="@color/DeepAqua"
                 android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/img_exchange7"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="40dp"
+                android:layout_width="21dp"
+                android:layout_height="45dp"
+                app:srcCompat="@drawable/exchange" />
         </LinearLayout>
 
         <LinearLayout
@@ -395,11 +451,19 @@
                 android:id="@+id/tv_am8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginTop="12dp"
-                android:text="am"
+                android:layout_weight="1"
+                android:text="pm"
                 android:textColor="@color/DeepAqua"
                 android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/img_exchange8"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="40dp"
+                android:layout_width="21dp"
+                android:layout_height="45dp"
+                app:srcCompat="@drawable/exchange" />
         </LinearLayout>
     </LinearLayout>
 

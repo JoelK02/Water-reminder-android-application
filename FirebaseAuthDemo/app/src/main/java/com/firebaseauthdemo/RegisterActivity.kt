@@ -125,9 +125,9 @@ class RegisterActivity : AppCompatActivity() {
                                     Toast.LENGTH_SHORT
                                 ).show()
 
-                                // sent user to from RegisterActivity to MainActivity
+                                // sent user to from RegisterActivity to HomePageActivity
                                 // Android API only accept java so use class.java
-                                val intent = Intent(this@RegisterActivity, MainActivity::class.java)
+                                val intent = Intent(this@RegisterActivity, HomePageActivity::class.java)
 
                                 // getting rid of extra layers of activities we had
                                 // e.g. from Register to Login, Login to Register wil cause lot of instance so need to get rid of these
