@@ -54,12 +54,21 @@ class MainActivity : AppCompatActivity() {
 
         val user = auth.currentUser
         val shop = findViewById<ImageView>(R.id.imgTrolley)
+        val imgHome = findViewById<ImageView>(R.id.imgHome)
 
         checkWater()
         displayCoin()
 
         shop.setOnClickListener {
             startActivity(Intent(this@MainActivity, CoinsActivity::class.java))
+            finish()
+        }
+//        shop.setOnClickListener {
+//            startActivity(Intent(this@MainActivity, MainActivity::class.java))
+//            finish()
+//        }
+        imgHome.setOnClickListener {
+            startActivity(Intent(this@MainActivity, HomePageActivity::class.java))
             finish()
         }
     }
@@ -77,9 +86,25 @@ class MainActivity : AppCompatActivity() {
 
         skin.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
+                val currentDate = SimpleDateFormat("DD").format(Calendar.getInstance().time).toInt()
                 val skin = snapshot.child("Skin").value.toString()
+                val pastDate = snapshot.child("PastDate").value.toString().toInt()
+
                 val emptySkin = SkinActivity().Skin1(skin)
                 val waterSkin = SkinActivity().Skin2(skin)
+
+
+                // if date is different, change all to full and havent drink, then set to current
+                if (currentDate != pastDate) {
+                    secondMethod(cup, waterSkin)
+                    val updateDate = mapOf<String,Int>(
+                        "PastDate" to currentDate
+                    )
+                    coin.child(user.uid).updateChildren(updateDate)
+                    startActivity(Intent(this@MainActivity, MainActivity::class.java))
+                    finish()
+                }
+
 
                 if (hour >= time && waterStatus == "0") {
                     firstMethod(cup, emptySkin, waterSkin)
@@ -384,6 +409,7 @@ class MainActivity : AppCompatActivity() {
         val glass7 = findViewById<ImageView>(R.id.cup7)
         val glass8 = findViewById<ImageView>(R.id.cup8)
         val hour = SimpleDateFormat("HH").format(Calendar.getInstance().time).toInt()
+
 
         if (cup == "1") {
             glass1.setImageResource(waterSkin)

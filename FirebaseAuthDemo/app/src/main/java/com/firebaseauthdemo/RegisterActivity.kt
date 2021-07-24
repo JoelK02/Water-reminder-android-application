@@ -14,7 +14,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class RegisterActivity : AppCompatActivity() {
@@ -152,6 +153,7 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun sendData() {
+        val date = SimpleDateFormat("DD").format(Calendar.getInstance().time).toInt()
         val username = et_register_username.text.toString().trim()
         val email = et_register_email.text.toString().trim()
         val password = et_register_password.text.toString().trim()
@@ -164,6 +166,7 @@ class RegisterActivity : AppCompatActivity() {
         currentUserDV.child("Password").setValue(password)
         currentUserDV.child("Skin").setValue("0")
         currentUserDV.child("Coins").setValue(0)
+        currentUserDV.child("PastDate").setValue(date)
 
         val cup1 = cup1.child(currentUser?.uid!!)
         val cup2 = cup2.child(currentUser?.uid!!)
