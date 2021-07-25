@@ -194,6 +194,15 @@ class RegisterActivity : AppCompatActivity() {
         cup7.child("Data").setValue("0")
         cup8.child("Data").setValue("0")
 
+        cup1.child("Time").setValue(8)
+        cup2.child("Time").setValue(10)
+        cup3.child("Time").setValue(12)
+        cup4.child("Time").setValue(14)
+        cup5.child("Time").setValue(16)
+        cup6.child("Time").setValue(18)
+        cup7.child("Time").setValue(20)
+        cup8.child("Time").setValue(22)
+
         skin1.child("Status").setValue("0")
         skin2.child("Status").setValue("0")
         skin3.child("Status").setValue("0")
