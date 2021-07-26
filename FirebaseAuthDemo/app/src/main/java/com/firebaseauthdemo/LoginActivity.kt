@@ -75,7 +75,7 @@ class LoginActivity : AppCompatActivity() {
                         val email: String = et_login_email.text.toString().trim { it <= ' ' }
                         val password: String = et_login_password.text.toString().trim { it <= ' ' }
 
-                        // Create an instance and create a register a suer with email and password
+                        // Create an instance and create a register user with email and password
                         // OnCompleteListener are mutiple overloads, task is one of the overload
                         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
                             .addOnCompleteListener { task ->

@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             android:contentDescription="image"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/bckglogin5" />
+            app:srcCompat="@drawable/bckgregister17" />
 
 
     </FrameLayout>
@@ -39,7 +39,7 @@
             android:layout_weight="1"
             android:scaleType="fitXY"
             android:textColor="@color/colorPrimaryDark"
-            app:srcCompat="@drawable/bckglogin11" />
+            app:srcCompat="@drawable/bckgregister3" />
     </LinearLayout>
 
     <TextView
