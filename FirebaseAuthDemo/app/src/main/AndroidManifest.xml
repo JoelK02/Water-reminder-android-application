@@ -11,6 +11,17 @@
         android:theme="@style/Theme.FirebaseAuthDemo">
 
 
+        <receiver android:name="com.example.myalarm.myBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="test"/>
+                <action android:name="test2"/>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+
+        </receiver>
         <activity android:name=".SkinShopActivity" >
 
 

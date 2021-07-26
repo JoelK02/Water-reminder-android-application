@@ -1,11 +1,19 @@
 package com.firebaseauthdemo
 
+import android.app.AlarmManager
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
+import android.content.BroadcastReceiver
+import android.content.Context
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.example.myalarm.myBroadcastReceiver
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import java.text.SimpleDateFormat
@@ -57,9 +65,11 @@ class MainActivity : AppCompatActivity() {
         val imgTime = findViewById<ImageView>(R.id.imgTime)
         val imgRefresh = findViewById<ImageView>(R.id.imgRefresh)
 
+        createNotificationChannel()
         checkWater()
         displayCoin()
         showTime()
+
 
         shop.setOnClickListener {
             startActivity(Intent(this@MainActivity, CoinsActivity::class.java))
@@ -72,6 +82,7 @@ class MainActivity : AppCompatActivity() {
         imgHome.setOnClickListener {
             startActivity(Intent(this@MainActivity, HomePageActivity::class.java))
             finish()
+
         }
         imgTime.setOnClickListener {
             startActivity(Intent(this@MainActivity, TimeScheduleActivity::class.java))
@@ -102,6 +113,8 @@ class MainActivity : AppCompatActivity() {
                     val updateDate = mapOf<String,Int>(
                         "PastDate" to currentDate
                     )
+
+
 
                     coin.child(user.uid).updateChildren(updateDate)
                     startActivity(Intent(this@MainActivity, MainActivity::class.java))
@@ -617,6 +630,8 @@ class MainActivity : AppCompatActivity() {
         val cup7 = cup7.child(user.uid)
         val cup8 = cup8.child(user.uid)
 
+
+
         val time1 = findViewById<TextView>(R.id.tv_cup1)
         val time2 = findViewById<TextView>(R.id.tv_cup2)
         val time3 = findViewById<TextView>(R.id.tv_cup3)
@@ -625,84 +640,216 @@ class MainActivity : AppCompatActivity() {
         val time6 = findViewById<TextView>(R.id.tv_cup6)
         val time7 = findViewById<TextView>(R.id.tv_cup7)
         val time8 = findViewById<TextView>(R.id.tv_cup8)
+        val hour = SimpleDateFormat("HH").format(Calendar.getInstance().time).toInt()
 
-        cup1.addValueEventListener(object : ValueEventListener {
+        time2.setOnClickListener {
+            println("h")
+        }
+
+        cup1.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val time = snapshot.child("Time").value.toString().toInt()
+                val cup = "1"
+                val cupNextDay = "1_next"
+
                 time1.text = time.toString()
+
+                if (hour < time) {
+                    notificationForToday(time, cup)
+                }
+                notificationForTomorrow(time, cupNextDay)
+
             }
 
             override fun onCancelled(error: DatabaseError) {}
         })
-        cup2.addValueEventListener(object : ValueEventListener {
+        cup2.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val time = snapshot.child("Time").value.toString().toInt()
+                val cup = "2"
+                val cupNextDay = "2_next"
+
                 time2.text = time.toString()
+
+                if (hour < time) {
+                    notificationForToday(time, cup)
+                }
+                notificationForTomorrow(time, cupNextDay)
+
             }
 
             override fun onCancelled(error: DatabaseError) {}
         })
-        cup3.addValueEventListener(object : ValueEventListener {
+        cup3.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val tv_am3 = findViewById<TextView>(R.id.tv_main_am3)
                 val time = snapshot.child("Time").value.toString().toInt()
+                val cup = "3"
+                val cupNextDay = "3_next"
+
                 if (time == 12) {
                     tv_am3.text = "pm"
                 } else {
                     tv_am3.text = "am"
                 }
                 time3.text = time.toString()
+
+                if (hour < time) {
+                    notificationForToday(time, cup)
+                }
+                notificationForTomorrow(time, cupNextDay)
+
             }
 
             override fun onCancelled(error: DatabaseError) {}
         })
-        cup4.addValueEventListener(object : ValueEventListener {
+        cup4.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 var time = snapshot.child("Time").value.toString().toInt()
-                time -= 12
-                time4.text = time.toString()
+                val cup = "4"
+                val cupNextDay = "4_next"
+
+                val timeDisplay = time - 12
+                time4.text = timeDisplay.toString()
+
+                if (hour < time) {
+                    notificationForToday(time, cup)
+                }
+                notificationForTomorrow(time, cupNextDay)
             }
 
             override fun onCancelled(error: DatabaseError) {}
         })
-        cup5.addValueEventListener(object : ValueEventListener {
+        cup5.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 var time = snapshot.child("Time").value.toString().toInt()
-                time -= 12
-                time5.text = time.toString()
+                val cup = "5"
+                val cupNextDay = "5_next"
+
+                val timeDisplay = time - 12
+                time5.text = timeDisplay.toString()
+
+                if (hour < time) {
+                    notificationForToday(time, cup)
+                }
+                notificationForTomorrow(time, cupNextDay)
             }
 
             override fun onCancelled(error: DatabaseError) {}
         })
-        cup6.addValueEventListener(object : ValueEventListener {
+        cup6.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 var time = snapshot.child("Time").value.toString().toInt()
-                time -= 12
-                time6.text = time.toString()
+                val cup = "6"
+                val cupNextDay = "6_next"
+
+                val timeDisplay = time - 12
+                time6.text = timeDisplay.toString()
+
+                if (hour < time) {
+                    notificationForToday(time, cup)
+                }
+                notificationForTomorrow(time, cupNextDay)
             }
 
             override fun onCancelled(error: DatabaseError) {}
         })
-        cup7.addValueEventListener(object : ValueEventListener {
+        cup7.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 var time = snapshot.child("Time").value.toString().toInt()
-                time -= 12
-                time7.text = time.toString()
+                val cup = "7"
+                val cupNextDay = "7_next"
+
+                val timeDisplay = time - 12
+                time7.text = timeDisplay.toString()
+
+                if (hour < time) {
+                    notificationForToday(time, cup)
+                }
+                notificationForTomorrow(time, cupNextDay)
             }
 
             override fun onCancelled(error: DatabaseError) {}
         })
-        cup8.addValueEventListener(object : ValueEventListener {
+        cup8.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 var time = snapshot.child("Time").value.toString().toInt()
-                time -= 12
-                time8.text = time.toString()
+                val cup = "8"
+                val cupNextDay = "8_next"
+
+                val timeDisplay = time - 12
+                time8.text = timeDisplay.toString()
+
+                if (hour < time) {
+                    notificationForToday(time, cup)
+                }
+                notificationForTomorrow(time, cupNextDay)
             }
 
             override fun onCancelled(error: DatabaseError) {}
         })
 
 
+    }
+
+    private fun notificationForTomorrow(time: Int, cup: String) {
+        val currentDate = SimpleDateFormat("DD").format(Calendar.getInstance().time).toInt()
+        val nextDay = currentDate + 1
+
+        val calendar= Calendar.getInstance()
+        calendar.set(Calendar.DAY_OF_YEAR, nextDay)
+        calendar.set(Calendar.HOUR_OF_DAY,time)
+        calendar.set(Calendar.MINUTE, 0)
+        calendar.set(Calendar.SECOND,0)
+
+        val am : AlarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        var intent = Intent(this@MainActivity, myBroadcastReceiver::class.java)
+        intent.action = cup
+        val pi= PendingIntent.getBroadcast(this@MainActivity, 0 , intent,0)
+
+        if (Build.VERSION.SDK_INT >= 23) {
+            println("Alarm Set for cup$cup next day")
+            am.setExact(AlarmManager.RTC_WAKEUP, calendar.timeInMillis, pi)
+        } else {
+            println("doesnt work")
+        }
+    }
+
+    private fun notificationForToday(time: Int, cup: String) {
+        val calendar= Calendar.getInstance()
+        calendar.set(Calendar.HOUR_OF_DAY,time)
+        calendar.set(Calendar.MINUTE, 0)
+        calendar.set(Calendar.SECOND,0)
+
+        val am : AlarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        var intent = Intent(this@MainActivity, myBroadcastReceiver::class.java)
+        intent.action = cup
+        val pi= PendingIntent.getBroadcast(this@MainActivity, 0 , intent,0)
+
+        if (Build.VERSION.SDK_INT >= 23) {
+            println("Alarm Set for cup$cup for today")
+            am.setExact(AlarmManager.RTC_WAKEUP, calendar.timeInMillis, pi)
+        } else {
+            println("doesnt work")
+        }
+    }
+
+    private fun createNotificationChannel() {
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name : CharSequence = "hello"
+            val description = "channel"
+            val importance = NotificationManager.IMPORTANCE_HIGH
+            val channel = NotificationChannel("hi",name,importance)
+
+            channel.description = description
+            val notificationManager = getSystemService(
+                NotificationManager::class.java
+            )
+
+
+            notificationManager.createNotificationChannel(channel)
+
+        }
     }
     }
 
