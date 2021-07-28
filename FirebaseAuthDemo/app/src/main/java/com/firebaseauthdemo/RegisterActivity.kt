@@ -53,6 +53,7 @@ class RegisterActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance("https://fir-authdemo-5224c-default-rtdb.asia-southeast1.firebasedatabase.app/")
+
         reference = database.getReference("Users")
 
         cup1 = database.getReference("Cup1")

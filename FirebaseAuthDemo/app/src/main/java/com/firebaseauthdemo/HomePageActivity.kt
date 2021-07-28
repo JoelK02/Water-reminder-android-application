@@ -29,11 +29,11 @@ class HomePageActivity : AppCompatActivity() {
         btn_logout = findViewById(R.id.btn_logout)
         auth = FirebaseAuth.getInstance()
 
-        /*card1.setOnClickListener {
+        card1.setOnClickListener {
 
-            val intent = Intent(this, TodoListActivity::class.java)
+            val intent = Intent(this, TodoActivity::class.java)
             startActivity(intent)
-        }*/
+        }
 
 
         card2.setOnClickListener {
@@ -42,6 +42,7 @@ class HomePageActivity : AppCompatActivity() {
         }
 
         btn_logout.setOnClickListener {
+            auth.signOut()
             startActivity(Intent(this@HomePageActivity, LoginActivity::class.java))
             finish()
         }
