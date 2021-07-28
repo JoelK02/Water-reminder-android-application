@@ -24,13 +24,14 @@
         </receiver>
         <activity android:name=".SkinShopActivity" >
 
-A
+
 
         </activity>
         <activity android:name=".TimeScheduleActivity" >
 
         </activity>
         <activity android:name=".HomePageActivity"/>
+        <activity android:name=".TodoActivity"/>
 
 
 

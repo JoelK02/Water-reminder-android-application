@@ -115,7 +115,6 @@ class MainActivity : AppCompatActivity() {
                     )
 
 
-
                     coin.child(user.uid).updateChildren(updateDate)
                     startActivity(Intent(this@MainActivity, MainActivity::class.java))
                     finish()
