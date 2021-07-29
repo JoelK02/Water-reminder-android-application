@@ -157,14 +157,13 @@ class RegisterActivity : AppCompatActivity() {
         val date = SimpleDateFormat("DD").format(Calendar.getInstance().time).toInt()
         val username = et_register_username.text.toString().trim()
         val email = et_register_email.text.toString().trim()
-        val password = et_register_password.text.toString().trim()
+
 
 
         val currentUser = auth.currentUser
         val currentUserDV= reference.child(currentUser?.uid!!)
         currentUserDV.child("Username").setValue(username)
         currentUserDV.child("Email").setValue(email)
-        currentUserDV.child("Password").setValue(password)
         currentUserDV.child("Skin").setValue("0")
         currentUserDV.child("Coins").setValue(0)
         currentUserDV.child("PastDate").setValue(date)
