@@ -27,10 +27,11 @@
 
             <TextView
                 android:id="@+id/tv_timeSchedule"
-                android:layout_width="229dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="40dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/amatica_sc"
                 android:text="Time  Schedule"

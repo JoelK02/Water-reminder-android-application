@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             android:contentDescription="image"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/bckglogin8" />
+            app:srcCompat="@drawable/bckglogin5" />
     </FrameLayout>
 
     <LinearLayout
