@@ -20,6 +20,7 @@ class TodoActivity : AppCompatActivity(), UpdateAndDelete {
     private var listViewItem : ListView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         auth = FirebaseAuth.getInstance()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.todo)
@@ -82,8 +83,6 @@ class TodoActivity : AppCompatActivity(), UpdateAndDelete {
             val toDoItemData = TodoModel.createList()
             var done = todoIndexedValue.child("done").value as Boolean
             var itemDataText = todoIndexedValue.child("itemDataText").value as String
-
-
 
 
             toDoItemData.UID = todoIndexedValue.key
